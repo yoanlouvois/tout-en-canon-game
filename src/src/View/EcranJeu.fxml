@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Fenêtre réduite à 960 x 640 ; l'écran d'origine (1200 x 800) est affiché à 80 % au centre, dans un cadre noir -->
+<ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="640.0" prefWidth="960.0" style="-fx-background: black; -fx-background-color: black; -fx-padding: 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerJeu">
+    <content>
+        <StackPane style="-fx-background-color: black;">
+            <children>
+                <!-- Le Group prend en compte la réduction : il occupe bien 960 x 640 dans la mise en page -->
+                <Group>
+                    <children>
+                        <!-- Écran d'origine inchangé, simplement réduit à 80 % -->
+                        <Pane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" scaleX="0.8" scaleY="0.8">
+                            <children>
+                                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css">
+                                    <center>
+                                        <Pane fx:id="mouvementArea" prefHeight="800.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ImageView fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../ressource/FondJeu.jpg" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="imageCharactere" fitHeight="150.0" fitWidth="150.0" layoutX="336.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../ressource/Momie.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="imagePotionSalle" fitHeight="150.0" fitWidth="200.0" layoutX="355.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                    <image>
+                                                        <Image url="@../ressource/potion.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="imageCleSalle" fitHeight="150.0" fitWidth="200.0" layoutX="337.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                    <image>
+                                                        <Image url="@../ressource/pied_de_biche_ramassage.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Label fx:id="label" alignment="CENTER" layoutX="82.0" layoutY="111.0" prefHeight="79.0" prefWidth="634.0" textAlignment="CENTER" textFill="#f4f433">
+                                                    <font>
+                                                        <Font size="53.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                    </center>
+                                    <left>
+                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <ImageView fitHeight="800.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../ressource/fondEgyptienJeu.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <VBox prefHeight="800.0" prefWidth="400.0" styleClass="-fx-background-color: blue;">
+                                                    <children>
+                                                        <Button fx:id="btnMP" mnemonicParsing="false" onAction="#onPushBtnMP" prefHeight="44.0" prefWidth="154.0" text="Menu Pricipal">
+                                                            <VBox.margin>
+                                                                <Insets left="10.0" top="10.0" />
+                                                            </VBox.margin>
+                                                        </Button>
+                                                        <Label fx:id="labelJoueurJeu" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="400.0" text="Joueur" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="48.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Separator prefWidth="200.0" />
+                                                        <Label fx:id="labelClasseJeu" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="400.0" text="Label" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="23.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ImageView fx:id="imageVie" fitHeight="100.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+                                                        <Separator prefWidth="200.0" />
+                                                        <Label fx:id="labelAttaqueJeu" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="400.0" text="Attaque :" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="24.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelVitesseJeu" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="400.0" text="Vitesse :" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="24.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Separator prefHeight="3.0" prefWidth="340.0" />
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="400.0" text="Inventaire" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="21.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ImageView fx:id="imageInventaire" fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </Pane>
+                                    </left>
+                                </BorderPane>
+                                <ImageView fx:id="imageCle" fitHeight="150.0" fitWidth="400.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ressource/non_cle.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </children>
+                </Group>
+            </children>
+        </StackPane>
+    </content>
+</ScrollPane>

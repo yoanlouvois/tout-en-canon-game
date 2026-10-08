@@ -1,0 +1,153 @@
+/* Style CSS pour une application sur le thème de l'Égypte */
+
+/* Utilisation d'une seule famille de police avec des variantes */
+.button, .radio-button, .text-field, .spinner .text-field {
+    -fx-font-family: 'Ancient Egypt Regular', 'Segoe UI', system-ui, sans-serif;
+    -fx-font-size: 12pt; /* Taille de police */
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0.5),
+                 dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, -1, 0, 1);
+}
+
+/* Bouton */
+.button {
+    -fx-padding: 0.9em 1.4em; /* Assurez-vous que le padding est suffisant */
+    -fx-min-width: 120px;
+    -fx-min-height: 50px; /* Ajustez la hauteur du bouton si nécessaire */
+    -fx-font-weight: bold;
+    -fx-transition: 0.8s;
+    -fx-background-color: linear-gradient(to right, #ffd700, #f0e68c); /* Dégradé doré */
+    -fx-background-radius: 0.5em;
+    -fx-border-radius: 0.5em;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0),
+                 dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, -1, 0, 5),
+                 innershadow(gaussian, rgba(255, 215, 0, 0.5), 4, 0.5, 0, 0),
+                 innershadow(gaussian, rgba(255, 215, 0, 0.35), -4, 0.35, 0, 0);
+}
+
+.button:hover {
+    -fx-background-position: right top;
+}
+
+.button:focused {
+    -fx-effect: dropshadow(gaussian, violet, 3, 0, 0, 0),
+                 dropshadow(gaussian, violet, 6, 0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        -fx-transition: linear;
+    }
+}
+
+
+/* Radio Button */
+.radio-button {
+    -fx-font-size: 18pt; /* Taille de police */
+    -fx-text-fill: red;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0.5),
+                 dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, -1, 0, 1);
+}
+
+.radio-button .radio {
+
+    -fx-mark-color: linear-gradient(to right, #ffd700, #f0e68c); /* Dégradé doré */
+    -fx-background-radius: 10px; /* Augmenter le rayon du fond */
+    -fx-padding: 10px; /* Augmenter le padding */
+}
+
+.radio-button:selected .radio {
+    -fx-mark-color: linear-gradient(to right, #8b4513, #cd853f); /* Dégradé brun */
+}
+
+.radio-button .radio:hover {
+    -fx-mark-color: linear-gradient(to right, #8b4513, #cd853f); /* Dégradé brun */
+}
+
+.radio-button:selected:focused .radio {
+    -fx-effect: dropshadow(gaussian, violet, 3, 0, 0, 0),
+                 dropshadow(gaussian, violet, 6, 0, 0, 0);
+}
+
+
+/* TextField */
+.text-field {
+    -fx-font-size: 12pt; /* Taille de police */
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-background-radius: 0.5em;
+    -fx-border-radius: 0.5em;
+    -fx-padding: 0.5em;
+    -fx-border-color: lightgray;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0.5),
+                 dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, -1, 0, 1);
+}
+
+.text-field:focused {
+    -fx-border-color: violet;
+    -fx-effect: dropshadow(gaussian, violet, 3, 0, 0, 0),
+                 dropshadow(gaussian, violet, 6, 0, 0, 0);
+}
+
+/* Spinner */
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: linear-gradient(to right, #ffd700, #f0e68c); /* Dégradé doré */
+    -fx-border-radius: 0.5em;
+    -fx-background-radius: 0.5em;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: linear-gradient(to right, #8b4513, #cd853f); /* Dégradé brun */
+}
+
+.spinner .text-field {
+    -fx-font-size: 12pt; /* Taille de police */
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-border-radius: 0.5em;
+    -fx-background-radius: 0.5em;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0.5),
+                 dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, -1, 0, 1);
+}
+
+/* Slider */
+.slider .track {
+    -fx-background-color: linear-gradient(to right, #ffd700, #f0e68c); /* Dégradé doré */
+    -fx-background-radius: 0.5em;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0.5),
+                 dropshadow(gaussian, rgba(0, 0, 0, 0.25), 3, -1, 0, 1);
+}
+
+.slider .thumb {
+    -fx-background-color: linear-gradient(to right, #ffd700, #f0e68c); /* Dégradé doré */
+    -fx-border-radius: 0.5em;
+    -fx-background-radius: 0.5em;
+}
+
+.slider .thumb:hover {
+    -fx-background-color: linear-gradient(to right, #8b4513, #cd853f); /* Dégradé brun */
+}
+
+.slider .thumb:focused {
+    -fx-effect: dropshadow(gaussian, violet, 3, 0, 0, 0),
+                 dropshadow(gaussian, violet, 6, 0, 0, 0);
+}
+
+/* Écran d'accueil : fond adaptatif avec cadre noir */
+.accueil-root {
+    -fx-background-color: black;
+    -fx-background-image: url("../ressource/FondAccueil.jpg");
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.accueil-scroll,
+.accueil-scroll > .viewport {
+    -fx-background-color: black;
+    -fx-background: black;
+    -fx-padding: 0;
+}

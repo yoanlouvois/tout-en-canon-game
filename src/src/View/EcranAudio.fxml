@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<!-- Fenêtre réduite à 960 x 640 ; l'écran d'origine (1200 x 800) est affiché à 80 % au centre, dans un cadre noir -->
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="640.0" prefWidth="960.0" style="-fx-background: black; -fx-background-color: black; -fx-padding: 0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerSon">
+    <content>
+        <StackPane style="-fx-background-color: black;">
+            <children>
+                <!-- Le Group prend en compte la réduction : il occupe bien 960 x 640 dans la mise en page -->
+                <Group>
+                    <children>
+                        <!-- Écran d'origine inchangé, simplement réduit à 80 % -->
+                        <Pane prefHeight="800.0" prefWidth="1200.0" scaleX="0.8" scaleY="0.8" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../ressource/fondSansTitre.png" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="29.0" prefHeight="100.0" prefWidth="602.0" style="-fx-font-weight: bold;" text="Tout en canon" textFill="WHITE">
+                                    <font>
+                                        <Font size="60.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="54.0" layoutY="48.0" mnemonicParsing="false" onAction="#pushBtnMenuP" prefHeight="54.0" prefWidth="186.0" text="Menu Principal" />
+                                <TextArea layoutX="39.0" layoutY="138.0" prefHeight="630.0" prefWidth="1109.0" text="-Dans la célèbre pyramide de Tout en Canon, la légende raconte qu'il existe un merveilleux trésor caché.&#10;Le but du jeu est de retrouver le pied-de-biche qui permet d'ouvrir la porte du trésor en faisant du drag &#10;and drop. &#10;&#10;-Cependant la pyramide est maudite et chaque salle possède 4 portes maléfiques qui ne s'ouvrent que &#10;si la porte de la salle adjacente correspondante est ouverte.&#10;&#10;-Ainsi vous pouvez vous déplacer avec Z,Q,S,D pour voyager entre les salles. &#10;Par ailleurs grâce à vos super pouvoir divin hérité de votre mère, vous pouvez accéder à la map &#10;en appuyant sur la touche R et switcher les salles de la pyramide avec Z,Q,S,D.&#10;&#10;-Attention des monstres se cachent parfois dans les salles, en utilisant le CLICK GAUCHE de la souris, &#10;vous pourrez tirer des balles nocives pour eux. &#10;&#10;-Appuyer sur A pour utiliser une potion. &#10;&#10;-Avant de partir dans cette aventure nous vous conseillons de prendre une carte vierge pour ne pas rester &#10;bloqué dans la pyramide et noter les salles visités.. sous peine... de vous perdre à tout jamais...&#10;">
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </TextArea>
+                            </children>
+                        </Pane>
+                    </children>
+                </Group>
+            </children>
+        </StackPane>
+    </content>
+</ScrollPane>
