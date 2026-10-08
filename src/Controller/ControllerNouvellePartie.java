@@ -66,11 +66,11 @@ public class ControllerNouvellePartie{
         Personnage selectedPersonnage;
         if ("Egyptien".equals(characterType)) {
             selectedPersonnage = App.egyptien;
-            Image egyptien = new Image("/egyptien_nouvell_partie.png");
+            Image egyptien = new Image("/ressource/egyptien_nouvell_partie.png");
             imageCharacter.setImage(egyptien);
         } else {
             selectedPersonnage = App.momie;
-            Image momie = new Image("/momie_nouvelle_partie.png");
+            Image momie = new Image("/ressource/momie_nouvelle_partie.png");
             imageCharacter.setImage(momie);
         }
         labelAttaque.setText("Attaque : " + selectedPersonnage.getAttaque());

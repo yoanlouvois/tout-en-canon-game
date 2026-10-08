@@ -43,8 +43,8 @@ public class ControllerMap {
 
         //Image de la clé
         if(App.getJeuInstance().getPersonnage().isCle()){
-            Image pied_de_biche = new Image("/pied_de_biche.png");imageCle.setImage(pied_de_biche);}
-        else{Image pied_de_biche = new Image("/non_cle.png");imageCle.setImage(pied_de_biche);}
+            Image pied_de_biche = new Image("/ressource/pied_de_biche.png");imageCle.setImage(pied_de_biche);}
+        else{Image pied_de_biche = new Image("/ressource/non_cle.png");imageCle.setImage(pied_de_biche);}
 
         //Image de la vie selon les points de vie du personnage
         imageVie.setImage(image_de_la_vie());
@@ -159,25 +159,25 @@ public class ControllerMap {
 
     public Image image_de_la_vie(){
         if(Objects.equals(App.getJeuInstance().getPersonnage().getNomClasse(), "Momie")){
-            if(App.getJeuInstance().getPersonnage().getNbDeVie()==1){return new Image("/Momie_1_vie.png");}
-            else if(App.getJeuInstance().getPersonnage().getNbDeVie()==2){return new Image("/Momie_2_vie.png");}
-            else if(App.getJeuInstance().getPersonnage().getNbDeVie()==3){return new Image("/Momie_3_vie.png");}
-            else if(App.getJeuInstance().getPersonnage().getNbDeVie()==4){return new Image("/Momie_4_vie.png");}
-            else{return new Image("/Momie_5_vie.png");}
+            if(App.getJeuInstance().getPersonnage().getNbDeVie()==1){return new Image("/ressource/Momie_1_vie.png");}
+            else if(App.getJeuInstance().getPersonnage().getNbDeVie()==2){return new Image("/ressource/Momie_2_vie.png");}
+            else if(App.getJeuInstance().getPersonnage().getNbDeVie()==3){return new Image("/ressource/Momie_3_vie.png");}
+            else if(App.getJeuInstance().getPersonnage().getNbDeVie()==4){return new Image("/ressource/Momie_4_vie.png");}
+            else{return new Image("/ressource/Momie_5_vie.png");}
         }
         else{
-            if (App.getJeuInstance().getPersonnage().getNbDeVie()==1){return new Image("/Egyptien_1_vie.png");}
-            else if (App.getJeuInstance().getPersonnage().getNbDeVie()==2){return new Image("/Egyptien_2_vie.png");}
-            else if (App.getJeuInstance().getPersonnage().getNbDeVie()==3){return new Image("/Egyptien_3_vie.png");}
-            else if (App.getJeuInstance().getPersonnage().getNbDeVie()==4){return new Image("/Egyptien_4_vie.png");}
-            else{return new Image("/Egyptien_5_vie.png");}
+            if (App.getJeuInstance().getPersonnage().getNbDeVie()==1){return new Image("/ressource/Egyptien_1_vie.png");}
+            else if (App.getJeuInstance().getPersonnage().getNbDeVie()==2){return new Image("/ressource/Egyptien_2_vie.png");}
+            else if (App.getJeuInstance().getPersonnage().getNbDeVie()==3){return new Image("/ressource/Egyptien_3_vie.png");}
+            else if (App.getJeuInstance().getPersonnage().getNbDeVie()==4){return new Image("/ressource/Egyptien_4_vie.png");}
+            else{return new Image("/ressource/Egyptien_5_vie.png");}
         }
     }
     public Image imagePotion(){
-        if (App.getJeuInstance().getPersonnage().getPotion()==0){return new Image("/potions_0.png");}
-        if (App.getJeuInstance().getPersonnage().getPotion()==1){return new Image("/potion_1.png");}
-        if (App.getJeuInstance().getPersonnage().getPotion()==2){return new Image("/potion_2.png");}
-        else{return new Image("/potion_3.png");}
+        if (App.getJeuInstance().getPersonnage().getPotion()==0){return new Image("/ressource/potions_0.png");}
+        if (App.getJeuInstance().getPersonnage().getPotion()==1){return new Image("/ressource/potion_1.png");}
+        if (App.getJeuInstance().getPersonnage().getPotion()==2){return new Image("/ressource/potion_2.png");}
+        else{return new Image("/ressource/potion_3.png");}
     }
 
     public void updateMapView() {
