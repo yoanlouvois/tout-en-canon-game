@@ -2,14 +2,18 @@
 
 Petit jeu d'aventure en Java et JavaFX : explorez une pyramide maudite, combattez ses monstres et retrouvez le trésor caché.
 
+<div align="center">
 <table>
   <tr>
     <td align="center">
-      <img width="600" alt="Écran de jeu" src="REMPLACER_PAR_LE_LIEN_DE_LA_CAPTURE" /><br />
+      <img width="600" alt="Écran de jeu" src="https://github.com/user-attachments/assets/5e88cd3a-a52f-4b76-8a24-6a075707d16c" /><br />
       <sub>Écran de jeu</sub>
     </td>
   </tr>
 </table>
+</div>
+
+
 
 ## Le jeu
 
